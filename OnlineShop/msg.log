@@ -1,0 +1,113 @@
+ERROR:django.request:Internal Server Error: /bankgateways/callback/
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\views.py", line 24, in callback_view
+    bank.verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 112, in verify_from_gateway
+    super(Mellat, self).verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 136, in verify_from_gateway
+    self.verify(self.get_tracking_code())
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 137, in verify
+    result = client.service.bpVerifyRequest(**data)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\proxy.py", line 46, in __call__
+    return self._proxy._binding.send(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 135, in send
+    return self.process_reply(client, operation_obj, response)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 229, in process_reply
+    return self.process_error(doc, operation)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 329, in process_error
+    raise Fault(
+zeep.exceptions.Fault: Unmarshalling Error: For input string: "" 
+CRITICAL:root:Invalid IP address
+ERROR:django.request:Internal Server Error: /orders/go_to_gateway/107/40000/
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 81, in pay
+    status, token = response.split(',')
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\OnlineShop\orders\views.py", line 147, in go_to_gateway_view
+    bank_record = bank.ready()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 112, in ready
+    self.pay()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 95, in pay
+    raise BankGatewayRejectPayment(self.get_transaction_status_text())
+azbankgateways.exceptions.exceptions.BankGatewayRejectPayment: Invalid IP address
+CRITICAL:root:Invalid IP address
+ERROR:django.request:Internal Server Error: /orders/go_to_gateway/107/40000/
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 81, in pay
+    status, token = response.split(',')
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\OnlineShop\orders\views.py", line 147, in go_to_gateway_view
+    bank_record = bank.ready()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 112, in ready
+    self.pay()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 95, in pay
+    raise BankGatewayRejectPayment(self.get_transaction_status_text())
+azbankgateways.exceptions.exceptions.BankGatewayRejectPayment: Invalid IP address
+CRITICAL:root:Invalid IP address
+ERROR:django.request:Internal Server Error: /orders/go_to_gateway/107/40000/
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 81, in pay
+    status, token = response.split(',')
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\OnlineShop\orders\views.py", line 147, in go_to_gateway_view
+    bank_record = bank.ready()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 112, in ready
+    self.pay()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 95, in pay
+    raise BankGatewayRejectPayment(self.get_transaction_status_text())
+azbankgateways.exceptions.exceptions.BankGatewayRejectPayment: Invalid IP address
+ERROR:django.request:Internal Server Error: /bankgateways/callback/
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\views.py", line 24, in callback_view
+    bank.verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 112, in verify_from_gateway
+    super(Mellat, self).verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 136, in verify_from_gateway
+    self.verify(self.get_tracking_code())
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 137, in verify
+    result = client.service.bpVerifyRequest(**data)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\proxy.py", line 46, in __call__
+    return self._proxy._binding.send(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 135, in send
+    return self.process_reply(client, operation_obj, response)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 229, in process_reply
+    return self.process_error(doc, operation)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 329, in process_error
+    raise Fault(
+zeep.exceptions.Fault: Unmarshalling Error: For input string: "" 
