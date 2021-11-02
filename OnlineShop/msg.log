@@ -111,3 +111,1104 @@ Traceback (most recent call last):
   File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 329, in process_error
     raise Fault(
 zeep.exceptions.Fault: Unmarshalling Error: For input string: "" 
+INFO:django.utils.autoreload:C:\Users\Shams\AppData\Roaming\Python\Python38\site-packages\azbankgateways\banks\mellat.py changed, reloading.
+ERROR:django.request:Internal Server Error: /bankgateways/callback/
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\views.py", line 24, in callback_view
+    bank.verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 112, in verify_from_gateway
+    super(Mellat, self).verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 136, in verify_from_gateway
+    self.verify(self.get_tracking_code())
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 137, in verify
+    result = client.service.bpVerifyRequest(**data)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\proxy.py", line 46, in __call__
+    return self._proxy._binding.send(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 135, in send
+    return self.process_reply(client, operation_obj, response)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 229, in process_reply
+    return self.process_error(doc, operation)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 329, in process_error
+    raise Fault(
+zeep.exceptions.Fault: Unmarshalling Error: For input string: "" 
+ERROR:root:Verify from gateway failed.
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\views.py", line 24, in callback_view
+    bank.verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 112, in verify_from_gateway
+    super(Mellat, self).verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 135, in verify_from_gateway
+    self._set_payment_status(PaymentStatus.RETURN_FROM_BANK)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 216, in _set_payment_status
+    raise BankGatewayStateInvalid(
+azbankgateways.exceptions.exceptions.BankGatewayStateInvalid: You change the status bank record before/after this record change status from redirect to bank. current status is Return from bank
+Stack (most recent call last):
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\threading.py", line 890, in _bootstrap
+    self._bootstrap_inner()
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\socketserver.py", line 720, in __init__
+    self.handle()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\servers\basehttp.py", line 178, in handle
+    self.handle_one_request()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\servers\basehttp.py", line 201, in handle_one_request
+    handler.run(self.server.get_app())
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\wsgiref\handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 76, in __call__
+    return self.application(environ, start_response)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\wsgi.py", line 133, in __call__
+    response = self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 130, in get_response
+    response = self._middleware_chain(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\views.py", line 26, in callback_view
+    logging.exception("Verify from gateway failed.", stack_info=True)
+WARNING:django.request:Not Found: /callback_gateway/
+WARNING:django.request:Not Found: /callback_gateway/
+ERROR:root:Verify from gateway failed.
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\views.py", line 24, in callback_view
+    bank.verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 112, in verify_from_gateway
+    super(Mellat, self).verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 135, in verify_from_gateway
+    self._set_payment_status(PaymentStatus.RETURN_FROM_BANK)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 216, in _set_payment_status
+    raise BankGatewayStateInvalid(
+azbankgateways.exceptions.exceptions.BankGatewayStateInvalid: You change the status bank record before/after this record change status from redirect to bank. current status is Return from bank
+Stack (most recent call last):
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\threading.py", line 890, in _bootstrap
+    self._bootstrap_inner()
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\socketserver.py", line 720, in __init__
+    self.handle()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\servers\basehttp.py", line 178, in handle
+    self.handle_one_request()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\servers\basehttp.py", line 201, in handle_one_request
+    handler.run(self.server.get_app())
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\wsgiref\handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 76, in __call__
+    return self.application(environ, start_response)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\wsgi.py", line 133, in __call__
+    response = self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 130, in get_response
+    response = self._middleware_chain(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\views.py", line 26, in callback_view
+    logging.exception("Verify from gateway failed.", stack_info=True)
+WARNING:django.request:Not Found: /callback_gateway/
+ERROR:django.request:Internal Server Error: /bankgateways/callback/
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\views.py", line 24, in callback_view
+    bank.verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 112, in verify_from_gateway
+    super(Mellat, self).verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 135, in verify_from_gateway
+    self._set_payment_status(PaymentStatus.RETURN_FROM_BANK)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 214, in _set_payment_status
+    if payment_status == PaymentStatus.RETURN_FROM_BANK and self._bank.status != PaymentStatus.REDIRECT_TO_BANK:
+AttributeError: 'NoneType' object has no attribute 'status'
+ERROR:django.request:Internal Server Error: /bankgateways/callback/
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\views.py", line 24, in callback_view
+    bank.verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 112, in verify_from_gateway
+    super(Mellat, self).verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 136, in verify_from_gateway
+    self.verify(self.get_tracking_code())
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 137, in verify
+    result = client.service.bpVerifyRequest(**data)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\proxy.py", line 46, in __call__
+    return self._proxy._binding.send(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 135, in send
+    return self.process_reply(client, operation_obj, response)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 229, in process_reply
+    return self.process_error(doc, operation)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 329, in process_error
+    raise Fault(
+zeep.exceptions.Fault: Unmarshalling Error: For input string: "" 
+ERROR:django.request:Internal Server Error: /bankgateways/callback/
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\views.py", line 24, in callback_view
+    bank.verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 112, in verify_from_gateway
+    super(Mellat, self).verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 136, in verify_from_gateway
+    self.verify(self.get_tracking_code())
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 137, in verify
+    result = client.service.bpVerifyRequest(**data)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\proxy.py", line 46, in __call__
+    return self._proxy._binding.send(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 135, in send
+    return self.process_reply(client, operation_obj, response)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 229, in process_reply
+    return self.process_error(doc, operation)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 329, in process_error
+    raise Fault(
+zeep.exceptions.Fault: Unmarshalling Error: For input string: "" 
+ERROR:django.request:Internal Server Error: /bankgateways/callback/
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\views.py", line 24, in callback_view
+    bank.verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 112, in verify_from_gateway
+    super(Mellat, self).verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 136, in verify_from_gateway
+    self.verify(self.get_tracking_code())
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 137, in verify
+    result = client.service.bpVerifyRequest(**data)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\proxy.py", line 46, in __call__
+    return self._proxy._binding.send(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 135, in send
+    return self.process_reply(client, operation_obj, response)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 229, in process_reply
+    return self.process_error(doc, operation)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 329, in process_error
+    raise Fault(
+zeep.exceptions.Fault: Unmarshalling Error: For input string: "" 
+ERROR:root:Verify from gateway failed.
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\views.py", line 24, in callback_view
+    bank.verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 112, in verify_from_gateway
+    super(Mellat, self).verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 135, in verify_from_gateway
+    self._set_payment_status(PaymentStatus.RETURN_FROM_BANK)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 216, in _set_payment_status
+    raise BankGatewayStateInvalid(
+azbankgateways.exceptions.exceptions.BankGatewayStateInvalid: You change the status bank record before/after this record change status from redirect to bank. current status is Return from bank
+Stack (most recent call last):
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\threading.py", line 890, in _bootstrap
+    self._bootstrap_inner()
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\socketserver.py", line 720, in __init__
+    self.handle()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\servers\basehttp.py", line 178, in handle
+    self.handle_one_request()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\servers\basehttp.py", line 201, in handle_one_request
+    handler.run(self.server.get_app())
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\wsgiref\handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 76, in __call__
+    return self.application(environ, start_response)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\wsgi.py", line 133, in __call__
+    response = self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 130, in get_response
+    response = self._middleware_chain(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\views.py", line 26, in callback_view
+    logging.exception("Verify from gateway failed.", stack_info=True)
+WARNING:django.request:Not Found: /callback_gateway/
+ERROR:root:Verify from gateway failed.
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\views.py", line 24, in callback_view
+    bank.verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 112, in verify_from_gateway
+    super(Mellat, self).verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 135, in verify_from_gateway
+    self._set_payment_status(PaymentStatus.RETURN_FROM_BANK)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 216, in _set_payment_status
+    raise BankGatewayStateInvalid(
+azbankgateways.exceptions.exceptions.BankGatewayStateInvalid: You change the status bank record before/after this record change status from redirect to bank. current status is Return from bank
+Stack (most recent call last):
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\threading.py", line 890, in _bootstrap
+    self._bootstrap_inner()
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\socketserver.py", line 720, in __init__
+    self.handle()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\servers\basehttp.py", line 178, in handle
+    self.handle_one_request()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\servers\basehttp.py", line 201, in handle_one_request
+    handler.run(self.server.get_app())
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\wsgiref\handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 76, in __call__
+    return self.application(environ, start_response)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\wsgi.py", line 133, in __call__
+    response = self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 130, in get_response
+    response = self._middleware_chain(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\views.py", line 26, in callback_view
+    logging.exception("Verify from gateway failed.", stack_info=True)
+WARNING:django.request:Not Found: /callback_gateway/
+ERROR:django.request:Internal Server Error: /bankgateways/callback/
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\views.py", line 24, in callback_view
+    bank.verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 112, in verify_from_gateway
+    super(Mellat, self).verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 136, in verify_from_gateway
+    self.verify(self.get_tracking_code())
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 137, in verify
+    result = client.service.bpVerifyRequest(**data)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\proxy.py", line 46, in __call__
+    return self._proxy._binding.send(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 135, in send
+    return self.process_reply(client, operation_obj, response)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 229, in process_reply
+    return self.process_error(doc, operation)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 329, in process_error
+    raise Fault(
+zeep.exceptions.Fault: Unmarshalling Error: For input string: "" 
+ERROR:django.request:Internal Server Error: /bankgateways/callback/
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\views.py", line 24, in callback_view
+    bank.verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 112, in verify_from_gateway
+    super(Mellat, self).verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 136, in verify_from_gateway
+    self.verify(self.get_tracking_code())
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 137, in verify
+    result = client.service.bpVerifyRequest(**data)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\proxy.py", line 46, in __call__
+    return self._proxy._binding.send(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 135, in send
+    return self.process_reply(client, operation_obj, response)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 229, in process_reply
+    return self.process_error(doc, operation)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 329, in process_error
+    raise Fault(
+zeep.exceptions.Fault: Unmarshalling Error: For input string: "" 
+INFO:django.utils.autoreload:C:\Users\Shams\PycharmProjects\test\OnlineShop\orders\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /bankgateways/callback/
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\views.py", line 24, in callback_view
+    bank.verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 112, in verify_from_gateway
+    super(Mellat, self).verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 136, in verify_from_gateway
+    self.verify(self.get_tracking_code())
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 137, in verify
+    result = client.service.bpVerifyRequest(**data)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\proxy.py", line 46, in __call__
+    return self._proxy._binding.send(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 135, in send
+    return self.process_reply(client, operation_obj, response)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 229, in process_reply
+    return self.process_error(doc, operation)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 329, in process_error
+    raise Fault(
+zeep.exceptions.Fault: Unmarshalling Error: For input string: "" 
+ERROR:django.request:Internal Server Error: /bankgateways/callback/
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\views.py", line 24, in callback_view
+    bank.verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 112, in verify_from_gateway
+    super(Mellat, self).verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 136, in verify_from_gateway
+    self.verify(self.get_tracking_code())
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 137, in verify
+    result = client.service.bpVerifyRequest(**data)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\proxy.py", line 46, in __call__
+    return self._proxy._binding.send(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 135, in send
+    return self.process_reply(client, operation_obj, response)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 229, in process_reply
+    return self.process_error(doc, operation)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\bindings\soap.py", line 329, in process_error
+    raise Fault(
+zeep.exceptions.Fault: Unmarshalling Error: For input string: "" 
+INFO:django.utils.autoreload:C:\Users\Shams\PycharmProjects\test\.venv\Lib\site-packages\azbankgateways\banks\mellat.py changed, reloading.
+WARNING:django.request:Not Found: /callback_gateway/
+INFO:django.utils.autoreload:C:\Users\Shams\PycharmProjects\test\OnlineShop\orders\views.py changed, reloading.
+WARNING:django.request:Not Found: /callback-gateway/
+INFO:django.utils.autoreload:C:\Users\Shams\PycharmProjects\test\OnlineShop\orders\views.py changed, reloading.
+WARNING:django.request:Not Found: /bankgateways/callback/orders/callback-gateway/
+INFO:django.utils.autoreload:C:\Users\Shams\PycharmProjects\test\OnlineShop\OnlineShop\urls.py changed, reloading.
+ERROR:django.request:Internal Server Error: /bankgateways/callback/
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\views.py", line 27, in callback_view
+    return bank.redirect_client_callback()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 148, in redirect_client_callback
+    return redirect(self.get_client_callback_url())
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\shortcuts.py", line 41, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\shortcuts.py", line 130, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'callback_gateway_view?tc=7581840948307689' not found. 'callback_gateway_view?tc=7581840948307689' is not a valid view function or pattern name.
+INFO:django.utils.autoreload:C:\Users\Shams\PycharmProjects\test\OnlineShop\orders\views.py changed, reloading.
+WARNING:django.request:Not Found: /bankgateways/callback/callback-gateway/
+INFO:django.utils.autoreload:C:\Users\Shams\PycharmProjects\test\OnlineShop\OnlineShop\urls.py changed, reloading.
+ERROR:django.request:Internal Server Error: /bankgateways/callback/
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x059EB070>, 'Connection to bpm.shaparak.ir timed out. (connect timeout=5)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\util\retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='bpm.shaparak.ir', port=443): Max retries exceeded with url: /pgwchannel/services/pgw?wsdl (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x059EB070>, 'Connection to bpm.shaparak.ir timed out. (connect timeout=5)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\views.py", line 24, in callback_view
+    bank.verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 113, in verify_from_gateway
+    super(Mellat, self).verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 136, in verify_from_gateway
+    self.verify(self.get_tracking_code())
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 137, in verify
+    client = self._get_client()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 148, in _get_client
+    client = Client('https://bpm.shaparak.ir/pgwchannel/services/pgw?wsdl', transport=transport)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\client.py", line 73, in __init__
+    self.wsdl = Document(wsdl, self.transport, settings=self.settings)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\wsdl.py", line 92, in __init__
+    self.load(location)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\wsdl.py", line 95, in load
+    document = self._get_xml_document(location)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\wsdl.py", line 155, in _get_xml_document
+    return load_external(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\loader.py", line 79, in load_external
+    content = transport.load(url)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\transports.py", line 122, in load
+    content = self._load_remote_data(url)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\transports.py", line 134, in _load_remote_data
+    response = self.session.get(url, timeout=self.load_timeout)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\sessions.py", line 555, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\adapters.py", line 504, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='bpm.shaparak.ir', port=443): Max retries exceeded with url: /pgwchannel/services/pgw?wsdl (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x059EB070>, 'Connection to bpm.shaparak.ir timed out. (connect timeout=5)'))
+ERROR:root:Verify from gateway failed.
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\views.py", line 24, in callback_view
+    bank.verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 113, in verify_from_gateway
+    super(Mellat, self).verify_from_gateway(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 135, in verify_from_gateway
+    self._set_payment_status(PaymentStatus.RETURN_FROM_BANK)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 216, in _set_payment_status
+    raise BankGatewayStateInvalid(
+azbankgateways.exceptions.exceptions.BankGatewayStateInvalid: You change the status bank record before/after this record change status from redirect to bank. current status is Return from bank
+Stack (most recent call last):
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\threading.py", line 890, in _bootstrap
+    self._bootstrap_inner()
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\socketserver.py", line 720, in __init__
+    self.handle()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\servers\basehttp.py", line 178, in handle
+    self.handle_one_request()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\servers\basehttp.py", line 201, in handle_one_request
+    handler.run(self.server.get_app())
+  File "c:\users\shams\appdata\local\programs\python\python38-32\lib\wsgiref\handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 76, in __call__
+    return self.application(environ, start_response)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\wsgi.py", line 133, in __call__
+    response = self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 130, in get_response
+    response = self._middleware_chain(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\utils\deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\views.py", line 26, in callback_view
+    logging.exception("Verify from gateway failed.", stack_info=True)
+WARNING:django.request:Not Found: /bankgateways/callback/callback-gateway/
+INFO:django.utils.autoreload:C:\Users\Shams\PycharmProjects\test\OnlineShop\orders\urls.py changed, reloading.
+WARNING:django.request:Not Found: /bankgateways/callback/callback-gateway/
+INFO:django.utils.autoreload:C:\Users\Shams\PycharmProjects\test\OnlineShop\OnlineShop\urls.py changed, reloading.
+WARNING:django.request:Not Found: /callback_gateway/
+WARNING:django.request:Not Found: /callback_gateway/
+INFO:django.utils.autoreload:C:\Users\Shams\PycharmProjects\test\OnlineShop\orders\urls.py changed, reloading.
+WARNING:django.request:Not Found: /callback_gateway/
+INFO:django.utils.autoreload:C:\Users\Shams\PycharmProjects\test\OnlineShop\orders\urls.py changed, reloading.
+WARNING:django.request:Not Found: /bankgateways/callback/callback/
+INFO:django.utils.autoreload:C:\Users\Shams\PycharmProjects\test\OnlineShop\orders\views.py changed, reloading.
+WARNING:django.request:Not Found: /callback/
+INFO:django.utils.autoreload:C:\Users\Shams\PycharmProjects\test\OnlineShop\orders\urls.py changed, reloading.
+ERROR:root:Verify from gateway failed.
+Traceback (most recent call last):
+  File "C:\Users\Shams\AppData\Roaming\Python\Python38\site-packages\azbankgateways\views.py", line 24, in callback_view
+    bank.verify_from_gateway(request)
+  File "C:\Users\Shams\AppData\Roaming\Python\Python38\site-packages\azbankgateways\banks\mellat.py", line 113, in verify_from_gateway
+    super(Mellat, self).verify_from_gateway(request)
+  File "C:\Users\Shams\AppData\Roaming\Python\Python38\site-packages\azbankgateways\banks\banks.py", line 135, in verify_from_gateway
+    self._set_payment_status(PaymentStatus.RETURN_FROM_BANK)
+  File "C:\Users\Shams\AppData\Roaming\Python\Python38\site-packages\azbankgateways\banks\banks.py", line 216, in _set_payment_status
+    raise BankGatewayStateInvalid(
+azbankgateways.exceptions.exceptions.BankGatewayStateInvalid: You change the status bank record before/after this record change status from redirect to bank. current status is Complete
+Stack (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm 2020.1\plugins\python\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 770, in __call__
+    ret = self.original_func(*self.args, **self.kwargs)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\threading.py", line 890, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\socketserver.py", line 720, in __init__
+    self.handle()
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\servers\basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\servers\basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\wsgiref\handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\contrib\staticfiles\handlers.py", line 65, in __call__
+    return self.application(environ, start_response)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\wsgi.py", line 141, in __call__
+    response = self.get_response(request)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 75, in get_response
+    response = self._middleware_chain(request)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\utils\deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\utils\deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\utils\deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\utils\deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\utils\deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\utils\deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\utils\deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shams\AppData\Roaming\Python\Python38\site-packages\azbankgateways\views.py", line 26, in callback_view
+    logging.exception("Verify from gateway failed.", stack_info=True)
+WARNING:django.request:Not Found: /callback-gateway/
+WARNING:django.request:Not Found: /callback-gateway/
+WARNING:django.request:Not Found: /callback-gateway/
+WARNING:django.request:Not Found: /callback-gateway/
+INFO:django.utils.autoreload:C:\Users\Shams\PycharmProjects\test\OnlineShop\payments\urls.py changed, reloading.
+WARNING:django.request:Not Found: /callback-gateway/
+WARNING:django.request:Not Found: /callback-gateway/
+INFO:django.utils.autoreload:C:\Users\Shams\PycharmProjects\test\OnlineShop\OnlineShop\urls.py changed, reloading.
+WARNING:django.request:Not Found: /callback-gateway/
+INFO:django.utils.autoreload:C:\Users\Shams\PycharmProjects\test\OnlineShop\OnlineShop\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Shams\PycharmProjects\test\OnlineShop\orders\urls.py changed, reloading.
+ERROR:django.request:Internal Server Error: /callback-gateway/
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\OnlineShop\payments\views.py", line 51, in callback_gateway_view
+    exctra_info = request.GET()
+TypeError: 'QueryDict' object is not callable
+INFO:django.utils.autoreload:C:\Users\Shams\PycharmProjects\test\OnlineShop\payments\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Shams\PycharmProjects\test\OnlineShop\orders\admin.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Shams\PycharmProjects\test\OnlineShop\account\models.py changed, reloading.
+ERROR:django.request:Internal Server Error: /payments/go-to-gateway/150/10000/
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x05CC3928>, 'Connection to bpm.shaparak.ir timed out. (connect timeout=5)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\util\retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='bpm.shaparak.ir', port=443): Max retries exceeded with url: /pgwchannel/services/pgw?wsdl (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x05CC3928>, 'Connection to bpm.shaparak.ir timed out. (connect timeout=5)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\OnlineShop\payments\views.py", line 28, in go_to_gateway_view
+    bank_record = bank.ready()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 112, in ready
+    self.pay()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 78, in pay
+    client = self._get_client()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 148, in _get_client
+    client = Client('https://bpm.shaparak.ir/pgwchannel/services/pgw?wsdl', transport=transport)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\client.py", line 73, in __init__
+    self.wsdl = Document(wsdl, self.transport, settings=self.settings)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\wsdl.py", line 92, in __init__
+    self.load(location)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\wsdl.py", line 95, in load
+    document = self._get_xml_document(location)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\wsdl.py", line 155, in _get_xml_document
+    return load_external(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\loader.py", line 79, in load_external
+    content = transport.load(url)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\transports.py", line 122, in load
+    content = self._load_remote_data(url)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\transports.py", line 134, in _load_remote_data
+    response = self.session.get(url, timeout=self.load_timeout)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\sessions.py", line 555, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\adapters.py", line 504, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='bpm.shaparak.ir', port=443): Max retries exceeded with url: /pgwchannel/services/pgw?wsdl (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x05CC3928>, 'Connection to bpm.shaparak.ir timed out. (connect timeout=5)'))
+ERROR:django.request:Internal Server Error: /payments/go-to-gateway/150/10000/
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x05D557A8>, 'Connection to bpm.shaparak.ir timed out. (connect timeout=5)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\util\retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='bpm.shaparak.ir', port=443): Max retries exceeded with url: /pgwchannel/services/pgw?wsdl (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x05D557A8>, 'Connection to bpm.shaparak.ir timed out. (connect timeout=5)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\OnlineShop\payments\views.py", line 28, in go_to_gateway_view
+    bank_record = bank.ready()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 112, in ready
+    self.pay()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 78, in pay
+    client = self._get_client()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 148, in _get_client
+    client = Client('https://bpm.shaparak.ir/pgwchannel/services/pgw?wsdl', transport=transport)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\client.py", line 73, in __init__
+    self.wsdl = Document(wsdl, self.transport, settings=self.settings)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\wsdl.py", line 92, in __init__
+    self.load(location)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\wsdl.py", line 95, in load
+    document = self._get_xml_document(location)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\wsdl.py", line 155, in _get_xml_document
+    return load_external(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\loader.py", line 79, in load_external
+    content = transport.load(url)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\transports.py", line 122, in load
+    content = self._load_remote_data(url)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\transports.py", line 134, in _load_remote_data
+    response = self.session.get(url, timeout=self.load_timeout)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\sessions.py", line 555, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\adapters.py", line 504, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='bpm.shaparak.ir', port=443): Max retries exceeded with url: /pgwchannel/services/pgw?wsdl (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x05D557A8>, 'Connection to bpm.shaparak.ir timed out. (connect timeout=5)'))
+ERROR:django.request:Internal Server Error: /payments/go-to-gateway/151/10000/
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x057C2310>, 'Connection to bpm.shaparak.ir timed out. (connect timeout=5)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\util\retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='bpm.shaparak.ir', port=443): Max retries exceeded with url: /pgwchannel/services/pgw?wsdl (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x057C2310>, 'Connection to bpm.shaparak.ir timed out. (connect timeout=5)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\OnlineShop\payments\views.py", line 28, in go_to_gateway_view
+    bank_record = bank.ready()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 112, in ready
+    self.pay()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 78, in pay
+    client = self._get_client()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 148, in _get_client
+    client = Client('https://bpm.shaparak.ir/pgwchannel/services/pgw?wsdl', transport=transport)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\client.py", line 73, in __init__
+    self.wsdl = Document(wsdl, self.transport, settings=self.settings)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\wsdl.py", line 92, in __init__
+    self.load(location)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\wsdl.py", line 95, in load
+    document = self._get_xml_document(location)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\wsdl.py", line 155, in _get_xml_document
+    return load_external(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\loader.py", line 79, in load_external
+    content = transport.load(url)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\transports.py", line 122, in load
+    content = self._load_remote_data(url)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\transports.py", line 134, in _load_remote_data
+    response = self.session.get(url, timeout=self.load_timeout)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\sessions.py", line 555, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\adapters.py", line 504, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='bpm.shaparak.ir', port=443): Max retries exceeded with url: /pgwchannel/services/pgw?wsdl (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x057C2310>, 'Connection to bpm.shaparak.ir timed out. (connect timeout=5)'))
+INFO:django.utils.autoreload:C:\Users\Shams\PycharmProjects\test\OnlineShop\OnlineShop\settings.py changed, reloading.
+ERROR:django.request:Internal Server Error: /payments/go-to-gateway/152/10000/
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x0658F580>, 'Connection to bpm.shaparak.ir timed out. (connect timeout=5)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\urllib3\util\retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='bpm.shaparak.ir', port=443): Max retries exceeded with url: /pgwchannel/services/pgw?wsdl (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0658F580>, 'Connection to bpm.shaparak.ir timed out. (connect timeout=5)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\OnlineShop\payments\views.py", line 28, in go_to_gateway_view
+    bank_record = bank.ready()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\banks.py", line 112, in ready
+    self.pay()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 78, in pay
+    client = self._get_client()
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\azbankgateways\banks\mellat.py", line 148, in _get_client
+    client = Client('https://bpm.shaparak.ir/pgwchannel/services/pgw?wsdl', transport=transport)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\client.py", line 73, in __init__
+    self.wsdl = Document(wsdl, self.transport, settings=self.settings)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\wsdl.py", line 92, in __init__
+    self.load(location)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\wsdl.py", line 95, in load
+    document = self._get_xml_document(location)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\wsdl\wsdl.py", line 155, in _get_xml_document
+    return load_external(
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\loader.py", line 79, in load_external
+    content = transport.load(url)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\transports.py", line 122, in load
+    content = self._load_remote_data(url)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\zeep\transports.py", line 134, in _load_remote_data
+    response = self.session.get(url, timeout=self.load_timeout)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\sessions.py", line 555, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Shams\PycharmProjects\test\.venv\lib\site-packages\requests\adapters.py", line 504, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='bpm.shaparak.ir', port=443): Max retries exceeded with url: /pgwchannel/services/pgw?wsdl (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0658F580>, 'Connection to bpm.shaparak.ir timed out. (connect timeout=5)'))
+INFO:django.utils.autoreload:C:\Users\Shams\PycharmProjects\test\OnlineShop\OnlineShop\settings.py changed, reloading.

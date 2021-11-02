@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+    <p style="font-family: 'B Titr'">پرداخت با موفقیت انجام شد.</p>
+
+    <p style="font-family: 'B Titr'">{{ tracking_code }} کد خرید شما :</p>
+
+    <a href="{% url 'orders:show_orders' %}" class="btn btn-primary">بازگشت به سفارشات</a>
+{% endblock %}

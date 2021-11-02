@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <p style="font-family: 'B Titr'">ویرایش اطلاعات</p>
+    <form style="font-family: 'B Titr'" action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <p><input type="submit" class="btn btn-primary" value="ذخیره تغییرات"></p>
+    </form>
+{% endblock %}
