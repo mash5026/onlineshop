@@ -1,2 +1,2 @@
 # onlineshop
-create with django and available in : https://arrayarcstudio.ir
+created by django and available in : https://arrayarcstudio.ir
